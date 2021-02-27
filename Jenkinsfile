@@ -6,12 +6,12 @@ node {
 	}
 	stage ('Build project'){
         dir("SeleniumTests") {
-	        sh "mvn clean install"
+	       // sh "mvn clean install"
         }
     }
     stage ('Run Selenium Tests') {
         dir("SeleniumTests/target") {
-	        sh "java -jar SeleniumTests-1.0-SNAPSHOT.jar"
+	        //sh "java -jar SeleniumTests-1.0-SNAPSHOT.jar"
         }
 	}
 }
