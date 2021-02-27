@@ -5,8 +5,8 @@ node {
             url: 'https://github.com/MonikaJaroch/SeleniumTests.git'
 	}
 	stage ('Build project'){
-        dir("SeleniumTests") {
-	       // sh "mvn clean install"
+        dir("Selenium Tests") {
+	       sh "mvn clean install"
         }
     }
     stage ('Run Selenium Tests') {
