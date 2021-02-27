@@ -7,6 +7,7 @@ node {
 	stage ('Build project'){
 	       sh "export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64"
            sh "export PATH=$PATH:$JAVA_HOME"
+           sh "export DISPLAY=:0"
            sh "xhost +"
 	       sh "mvn clean install"
     }
