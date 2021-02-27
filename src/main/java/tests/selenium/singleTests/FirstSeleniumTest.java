@@ -17,19 +17,19 @@ public class FirstSeleniumTest {
 
         driver.get("https://rahulshettyacademy.com/seleniumPractise/");
         // driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); IMPLICIT WAIT GLOBALY
-        WebDriverWait w = new WebDriverWait(driver,5);//explicit wait
+        WebDriverWait webDriverWait = new WebDriverWait(driver,5);//explicit wait
         String[] productNeeded = {"Brocolli","Cucumber","Tomato"};
         Thread.sleep(3000);
         addToCard(driver,productNeeded);
         driver.findElement(By.xpath("//a[@class='cart-icon']/img")).click();
         driver.findElement(By.xpath("//button[contains(text(),'PROCEED TO CHECKOUT')]")).click();
         //explicit wait
-        w.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input.promoCode")));
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input.promoCode")));
         driver.findElement(By.cssSelector("input.promoCode")).sendKeys("rahulshettyacademy");
 
         driver.findElement(By.cssSelector("button.promoBtn")).click();
         //explicit wait
-        w.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.promoInfo")));
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.promoInfo")));
         System.out.println(driver.findElement(By.cssSelector("span.promoInfo")).getText());
         driver.close();
     }
