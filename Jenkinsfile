@@ -11,6 +11,7 @@ node {
     }
     stage ('Run Selenium Tests') {
         dir("target") {
+            sh "export DISPLAY=:0"
 	        sh "java -jar SeleniumTests-1.0-SNAPSHOT.jar"
         }
 	}
