@@ -17,7 +17,7 @@ public class FirstSeleniumTest {
 
         driver.get("https://rahulshettyacademy.com/seleniumPractise/");
         // driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); IMPLICIT WAIT GLOBALY
-        WebDriverWait w = new WebDriverWait(driver,5);//explicit wait
+        WebDriverWait web = new WebDriverWait(driver,5);//explicit wait
         String[] productNeeded = {"Brocolli","Cucumber","Tomato"};
         Thread.sleep(3000);
         addToCard(driver,productNeeded);
