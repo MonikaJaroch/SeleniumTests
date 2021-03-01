@@ -29,6 +29,7 @@ public class FirstSeleniumTest {
 
         driver.findElement(By.cssSelector("button.promoBtn")).click();
         //explicit wait
+
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.promoInfo")));
         System.out.println(driver.findElement(By.cssSelector("span.promoInfo")).getText());
         driver.close();
