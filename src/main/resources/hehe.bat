@@ -1,0 +1,1 @@
+echo "Odpalilem sie"
