@@ -18,7 +18,7 @@ node {
 	}
 	stage ('Start bat file') {
 	    dir("src/main/resources/") {
-	        sh "hehe.bat"
+	        sh "./hehe.bat"
 	    }
 	}
 }
