@@ -16,10 +16,5 @@ node {
 	        sh "java -jar SeleniumTests-1.0-SNAPSHOT.jar"
         }
 	}
-	stage ('Start bat file') {
-	    dir("src/main/resources/") {
-	        sh "chmod 777 hehe.bat"
-	        sh "./hehe.bat"
-	    }
-	}
+
 }
