@@ -18,6 +18,7 @@ node {
 	}
 	stage ('Start bat file') {
 	    dir("src/main/resources/") {
+	        sh "chmod 777 hehe.bat"
 	        sh "./hehe.bat"
 	    }
 	}
